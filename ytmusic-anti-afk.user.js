@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         YouTube Music Anti-AFK
-// @namespace    ytmusic-anti-afk
-// @version      1.0
+// @namespace    https://github.com/InvictusNavarchus/ytmusic-anti-afk
+// @downloadURL  https://raw.githubusercontent.com/InvictusNavarchus/ytmusic-anti-afk/master/ytmusic-anti-afk.user.js
+// @updateURL    https://raw.githubusercontent.com/InvictusNavarchus/ytmusic-anti-afk/master/ytmusic-anti-afk.user.js
+// @version      0.1.0
 // @description  Automatically bypasses YouTube Music's "Are you still there?" checks
-// @author       You
+// @author       Invictus
 // @match        https://music.youtube.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=music.youtube.com
 // @grant        none
