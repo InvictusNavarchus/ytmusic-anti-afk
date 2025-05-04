@@ -1,0 +1,138 @@
+<ytmusic-popup-container
+    class="style-scope ytmusic-app"><!--css-build:shady--><!--css_build_scope:ytmusic-popup-container--><!--css_build_styles:video.youtube.src.web.polymer.shared.ui.styles.yt_base_styles.yt.base.styles.css.js,video.youtube.src.web.polymer.music.app.ui.shared.styles.ytmusic_base_styles.ytmusic.base.styles.css.js,video.youtube.src.web.polymer.music.app.ui.shared.ytmusic_popup_container.ytmusic.popup.container.css.js-->
+    <iron-media-query class="style-scope ytmusic-popup-container"
+        style="display: none;"></iron-media-query><ytmusic-notification-action-renderer
+        class="style-scope ytmusic-popup-container"
+        tabindex="-1"><!--css-build:shady--><!--css-build:shady--><yt-notification-action-renderer id="notification"
+            class="style-scope ytmusic-notification-action-renderer"><!--css-build:shady--><!--css-build:shady-->
+            <tp-yt-paper-toast id="toast" allow-click-through="" announce-label-updates="" aria-label="toast"
+                role="region" class="toast-button style-scope yt-notification-action-renderer"
+                style="outline: none; position: fixed; box-sizing: border-box; left: 0px; top: 576px; max-width: 359.733px; max-height: 48px; display: none;"
+                aria-hidden="true"><!--css-build:shady--><!--css-build:shady--><span id="label"
+                    class="style-scope tp-yt-paper-toast"></span>
+
+                <div id="text-container" class="style-scope yt-notification-action-renderer">
+                    <yt-formatted-string id="text" respect-html-dir="" split-lines=""
+                        class="style-scope yt-notification-action-renderer">Still watching? Video will pause
+                        soon</yt-formatted-string>
+                    <yt-formatted-string id="sub-text" respect-html-dir="" split-lines=""
+                        class="style-scope yt-notification-action-renderer"
+                        is-empty="function(){var e=Aa.apply(0,arguments);a.loggingStatus.currentExternalCall=b;a.loggingStatus.bypassProxyController=!0;var f,g=((f=a.is)!=null?f:a.tagName).toLowerCase();WQ(g,b,&quot;PROPERTY_ACCESS_CALL_EXTERNAL&quot;);var h;f=(h=c!=null?c:d[b])==null?void 0:h.call.apply(h,[d].concat(t(e)));a.loggingStatus.currentExternalCall=void 0;a.loggingStatus.bypassProxyController=!1;return f}"
+                        hidden=""><!--css-build:shady--><!--css-build:shady--><yt-attributed-string
+                            class="style-scope yt-formatted-string"></yt-attributed-string></yt-formatted-string>
+                </div>
+
+                <yt-button-renderer id="action-button" class="style-scope yt-notification-action-renderer"
+                    button-renderer="" button-next=""><!--css-build:shady--><yt-button-shape><button
+                            class="yt-spec-button-shape-next yt-spec-button-shape-next--text yt-spec-button-shape-next--call-to-action-inverse yt-spec-button-shape-next--size-m yt-spec-button-shape-next--enable-backdrop-filter-experiment"
+                            aria-disabled="false" style="" aria-label="Yes" title="">
+                            <div class="yt-spec-button-shape-next__button-text-content"><span
+                                    class="yt-core-attributed-string yt-core-attributed-string--white-space-no-wrap"
+                                    role="text">Yes</span></div><yt-touch-feedback-shape
+                                style="border-radius: inherit;">
+                                <div aria-hidden="true"
+                                    class="yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--touch-response-inverse">
+                                    <div class="yt-spec-touch-feedback-shape__stroke"></div>
+                                    <div class="yt-spec-touch-feedback-shape__fill"></div>
+                                </div>
+                            </yt-touch-feedback-shape>
+                        </button></yt-button-shape><tp-yt-paper-tooltip offset="8"
+                        disable-upgrade=""></tp-yt-paper-tooltip></yt-button-renderer>
+                <dom-if class="style-scope yt-notification-action-renderer"><template is="dom-if"></template></dom-if>
+                <dom-if class="style-scope yt-notification-action-renderer"><template is="dom-if"></template></dom-if>
+
+                <yt-icon-button id="close-button"
+                    class="style-scope yt-notification-action-renderer"><!--css-build:shady--><!--css-build:shady--><button
+                        id="button" class="style-scope yt-icon-button" aria-label="Dismiss">
+                        <yt-icon icon="yt-icons:close" class="style-scope yt-notification-action-renderer"><svg
+                                viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                                class="style-scope yt-icon">
+                                <g class="style-scope yt-icon">
+                                    <path
+                                        d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg><!--css-build:shady--><!--css-build:shady--></yt-icon>
+                    </button><yt-interaction id="interaction"
+                        class="circular style-scope yt-icon-button"><!--css-build:shady--><!--css-build:shady-->
+                        <div class="stroke style-scope yt-interaction"></div>
+                        <div class="fill style-scope yt-interaction"></div>
+                    </yt-interaction></yt-icon-button>
+                <dom-if class="style-scope yt-notification-action-renderer"><template is="dom-if"></template></dom-if>
+
+
+            </tp-yt-paper-toast>
+        </yt-notification-action-renderer></ytmusic-notification-action-renderer><tp-yt-paper-dialog style-target="host"
+        role="dialog" tabindex="-1"
+        style="outline: none; z-index: 103; position: fixed; top: 107.1px; left: 452.317px; box-sizing: border-box; max-height: 335px; max-width: 1307px;"
+        class="style-scope ytmusic-popup-container" prevent-autonav="true"
+        modern=""><!--css-build:shady--><!--css-build:shady--><ytmusic-you-there-renderer
+            class="style-scope ytmusic-popup-container" dialog="true"
+            tabindex="-1"><!--css-build:shady--><!--css-build:shady--><yt-formatted-string
+                class="text style-scope ytmusic-you-there-renderer">Video paused. Continue
+                watching?</yt-formatted-string>
+            <div class="actions style-scope ytmusic-you-there-renderer">
+                <yt-button-renderer dialog-confirm="" class="style-scope ytmusic-you-there-renderer" button-renderer=""
+                    button-next=""><!--css-build:shady--><yt-button-shape><button
+                            class="yt-spec-button-shape-next yt-spec-button-shape-next--text yt-spec-button-shape-next--call-to-action yt-spec-button-shape-next--size-m yt-spec-button-shape-next--enable-backdrop-filter-experiment"
+                            aria-disabled="false" style="" aria-label="Yes" title="">
+                            <div class="yt-spec-button-shape-next__button-text-content"><span
+                                    class="yt-core-attributed-string yt-core-attributed-string--white-space-no-wrap"
+                                    role="text">Yes</span></div><yt-touch-feedback-shape
+                                style="border-radius: inherit;">
+                                <div aria-hidden="true"
+                                    class="yt-spec-touch-feedback-shape yt-spec-touch-feedback-shape--touch-response">
+                                    <div class="yt-spec-touch-feedback-shape__stroke"></div>
+                                    <div class="yt-spec-touch-feedback-shape__fill"></div>
+                                </div>
+                            </yt-touch-feedback-shape>
+                        </button></yt-button-shape><tp-yt-paper-tooltip offset="8"
+                        disable-upgrade=""></tp-yt-paper-tooltip></yt-button-renderer>
+            </div>
+        </ytmusic-you-there-renderer>
+    </tp-yt-paper-dialog><ytmusic-notification-action-renderer class="style-scope ytmusic-popup-container"
+        tabindex="-1"><!--css-build:shady--><!--css-build:shady--><yt-notification-action-renderer id="notification"
+            class="style-scope ytmusic-notification-action-renderer"><!--css-build:shady--><!--css-build:shady-->
+            <tp-yt-paper-toast id="toast" allow-click-through="" announce-label-updates="" aria-label="toast"
+                role="region" class="style-scope yt-notification-action-renderer"
+                style="outline: none; position: fixed; box-sizing: border-box; left: 0px; top: 576px; max-width: 288px; max-height: 48px; display: none;"
+                aria-hidden="true"><!--css-build:shady--><!--css-build:shady--><span id="label"
+                    class="style-scope tp-yt-paper-toast"></span>
+
+                <div id="text-container" class="style-scope yt-notification-action-renderer">
+                    <yt-formatted-string id="text" respect-html-dir="" split-lines=""
+                        class="style-scope yt-notification-action-renderer">Thanks for confirming.</yt-formatted-string>
+                    <yt-formatted-string id="sub-text" respect-html-dir="" split-lines=""
+                        class="style-scope yt-notification-action-renderer"
+                        is-empty="function(){var e=Aa.apply(0,arguments);a.loggingStatus.currentExternalCall=b;a.loggingStatus.bypassProxyController=!0;var f,g=((f=a.is)!=null?f:a.tagName).toLowerCase();WQ(g,b,&quot;PROPERTY_ACCESS_CALL_EXTERNAL&quot;);var h;f=(h=c!=null?c:d[b])==null?void 0:h.call.apply(h,[d].concat(t(e)));a.loggingStatus.currentExternalCall=void 0;a.loggingStatus.bypassProxyController=!1;return f}"
+                        hidden=""><!--css-build:shady--><!--css-build:shady--><yt-attributed-string
+                            class="style-scope yt-formatted-string"></yt-attributed-string></yt-formatted-string>
+                </div>
+                <dom-if class="style-scope yt-notification-action-renderer"><template is="dom-if"></template></dom-if>
+                <dom-if class="style-scope yt-notification-action-renderer"><template is="dom-if"></template></dom-if>
+
+                <yt-icon-button id="close-button" class="style-scope yt-notification-action-renderer"
+                    hidden=""><!--css-build:shady--><!--css-build:shady--><button id="button"
+                        class="style-scope yt-icon-button" aria-label="Dismiss">
+                        <yt-icon icon="yt-icons:close" class="style-scope yt-notification-action-renderer"><svg
+                                viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                                class="style-scope yt-icon">
+                                <g class="style-scope yt-icon">
+                                    <path
+                                        d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg><!--css-build:shady--><!--css-build:shady--></yt-icon>
+                    </button><yt-interaction id="interaction"
+                        class="circular style-scope yt-icon-button"><!--css-build:shady--><!--css-build:shady-->
+                        <div class="stroke style-scope yt-interaction"></div>
+                        <div class="fill style-scope yt-interaction"></div>
+                    </yt-interaction></yt-icon-button>
+                <dom-if class="style-scope yt-notification-action-renderer"><template is="dom-if"></template></dom-if>
+
+
+            </tp-yt-paper-toast>
+        </yt-notification-action-renderer></ytmusic-notification-action-renderer>
+</ytmusic-popup-container>
