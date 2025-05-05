@@ -27,7 +27,7 @@ Tired of YouTube Music stopping mid-groove just because you're listening intentl
 
 3.  **🎧 Verify:** Open (or refresh) [music.youtube.com](music.youtube.com/). The script is active if you see the `📊` button in the bottom-left corner.
 
-##🖱️ Usage
+## 🖱️ Usage
 
 * **🧘 Automatic:** Just play your music on [music.youtube.com](http://googleusercontent.com/youtube.com/6)! The script works silently in the background. When a prompt appears, it should be dismissed automatically within seconds, followed by a confirmation toast.
 * **📊 Log Export:**
