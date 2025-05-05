@@ -1,6 +1,7 @@
 # 🎵 YouTube Music Anti-AFK 🤖
 
 [![Userscript Version](https://img.shields.io/badge/version-0.2.0-blue?style=flat-square)](https://raw.githubusercontent.com/InvictusNavarchus/ytmusic-anti-afk/master/ytmusic-anti-afk.user.js)
+![GPLv3 Badge](https://img.shields.io/badge/license-GPLv3-blue)
 
 Tired of YouTube Music stopping mid-groove just because you're listening intently (or happen to be away from the keyboard)? 😫 This userscript keeps the tunes flowing by automatically handling those pesky "Are you still there?" checks! ✨
 
