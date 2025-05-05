@@ -53,4 +53,4 @@ Tired of YouTube Music stopping mid-groove just because you're listening intentl
 > **Website Changes Can Break the Script:** This script relies on YouTube Music's current HTML structure. Future website updates might change element IDs or classes, which could stop the script from working correctly.
 
 > [!IMPORTANT]
-> **Log Storage Limits:** Logs are saved using your userscript manager (`GM_setValue`). This storage isn't unlimited and could be cleared by browser settings, extension updates, or manual actions. Export logs periodically if you need a permanent record.
+> **Log Storage Limits:** Logs are saved using your userscript manager (`GM_setValue`). While userscripts managers generally apply for `unlimitedStorage` permission, we shouldn't rely on it. The data could be cleared by userscript removal, uninstalling extension, or other manual actions. Export logs periodically if you need a permanent record.
