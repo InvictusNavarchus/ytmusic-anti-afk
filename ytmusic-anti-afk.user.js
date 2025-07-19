@@ -102,7 +102,8 @@
     const toastSystem = {
         container: null,
         activeToasts: [],
-        
+        clearAllButton: null,
+
         init() {
             // Create a container for our custom toasts
             this.container = document.createElement('div');
@@ -117,8 +118,51 @@
                 alignItems: 'flex-end'
             });
             document.body.appendChild(this.container);
+
+            // Create clear all button
+            this.createClearAllButton();
         },
-        
+
+        createClearAllButton() {
+            this.clearAllButton = document.createElement('button');
+            this.clearAllButton.textContent = '🗑️ Clear All';
+            this.clearAllButton.title = 'Clear all toast notifications';
+
+            Object.assign(this.clearAllButton.style, {
+                backgroundColor: 'rgba(33, 33, 33, 0.8)',
+                color: 'white',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                borderRadius: '4px',
+                padding: '8px 12px',
+                margin: '8px 0',
+                cursor: 'pointer',
+                fontSize: '12px',
+                display: 'none', // Initially hidden
+                transition: 'opacity 0.3s ease-in-out, background-color 0.2s ease'
+            });
+
+            // Hover effect
+            this.clearAllButton.addEventListener('mouseenter', () => {
+                this.clearAllButton.style.backgroundColor = 'rgba(33, 33, 33, 0.9)';
+            });
+
+            this.clearAllButton.addEventListener('mouseleave', () => {
+                this.clearAllButton.style.backgroundColor = 'rgba(33, 33, 33, 0.8)';
+            });
+
+            this.clearAllButton.addEventListener('click', () => {
+                this.dismissAll();
+            });
+
+            this.container.appendChild(this.clearAllButton);
+        },
+
+        updateClearAllButtonVisibility() {
+            if (this.clearAllButton) {
+                this.clearAllButton.style.display = this.activeToasts.length > 1 ? 'block' : 'none';
+            }
+        },
+
         show(message, isSuccess) {
             const toast = document.createElement('div');
             const toastId = Date.now();
@@ -175,12 +219,15 @@
             // Add to document
             this.container.appendChild(toast);
             this.activeToasts.push(toastId);
-            
+
+            // Update clear all button visibility
+            this.updateClearAllButtonVisibility();
+
             // Show with animation
             setTimeout(() => {
                 toast.style.opacity = '1';
             }, 10);
-            
+
             return toastId;
         },
         
@@ -191,6 +238,8 @@
                 setTimeout(() => {
                     toast.remove();
                     this.activeToasts = this.activeToasts.filter(toastId => toastId !== id);
+                    // Update clear all button visibility after removal
+                    this.updateClearAllButtonVisibility();
                 }, 300);
             }
         },
@@ -274,12 +323,15 @@
             // Add to document
             this.container.appendChild(toast);
             this.activeToasts.push(toastId);
-            
+
+            // Update clear all button visibility
+            this.updateClearAllButtonVisibility();
+
             // Show with animation
             setTimeout(() => {
                 toast.style.opacity = '1';
             }, 10);
-            
+
             return toastId;
         }
     };
