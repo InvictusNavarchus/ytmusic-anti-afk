@@ -363,42 +363,56 @@
             this.statsButton = document.createElement('button');
             this.statsButton.textContent = '📊';
             this.statsButton.title = 'Export Anti-AFK Logs';
-            
+
             Object.assign(this.statsButton.style, {
                 position: 'fixed',
-                bottom: '20px',
+                bottom: '80px',
                 left: '20px',
                 zIndex: '9999',
                 width: '40px',
                 height: '40px',
                 borderRadius: '50%',
-                backgroundColor: 'rgba(33, 33, 33, 0.7)',
+                backgroundColor: 'rgba(33, 33, 33, 0.8)',
                 color: 'white',
-                border: 'none',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
                 cursor: 'pointer',
                 fontSize: '20px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                boxShadow: '0 2px 5px rgba(0,0,0,0.2)'
+                boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                transition: 'all 0.2s ease-in-out'
             });
             
+            // Add hover effects
+            this.statsButton.addEventListener('mouseenter', () => {
+                this.statsButton.style.backgroundColor = 'rgba(33, 33, 33, 0.95)';
+                this.statsButton.style.transform = 'scale(1.1)';
+                this.statsButton.style.boxShadow = '0 6px 16px rgba(0,0,0,0.4)';
+            });
+
+            this.statsButton.addEventListener('mouseleave', () => {
+                this.statsButton.style.backgroundColor = 'rgba(33, 33, 33, 0.8)';
+                this.statsButton.style.transform = 'scale(1)';
+                this.statsButton.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+            });
+
             this.statsButton.addEventListener('click', () => {
                 const logs = storage.getLogs();
                 const logCount = logs.length;
-                
+
                 if (logCount > 0) {
                     toastSystem.showWithAction(
-                        `📊 ${logCount} bypass logs recorded`, 
+                        `📊 ${logCount} bypass logs recorded`,
                         true,
-                        'Export CSV', 
+                        'Export CSV',
                         () => csvExporter.downloadCSV()
                     );
                 } else {
                     toastSystem.show('No bypass logs recorded yet', false);
                 }
             });
-            
+
             document.body.appendChild(this.statsButton);
         },
         
